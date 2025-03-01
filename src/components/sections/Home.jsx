@@ -6,7 +6,7 @@ const Home = () => {
         <RevealOnScroll>
         <div className="text-center z-10 px-4">
           <h1 className="text-6xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-            Hi, I'm Priti Tech
+            Hi, I'm Priti Jadhav
           </h1>
           <p className="text-gray-400 text-xl mb-8 max-w-lg mx-auto">
             I'm a MERN-stack developer who loves crafting clean, scalable web applications. My goal is to build solutions that offer both exceptional performance and a delightful user experience.
