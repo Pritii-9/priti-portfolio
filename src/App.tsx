@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import LoadingScreen from "./components/LoadingScreen";
+import { ThemeProvider } from "./context/ThemeContext";
 import Navbar from "./components/Navbar";
 import MobileMenu from "./components/MobileMenu";
 import Home from "./components/sections/Home";
@@ -29,7 +30,7 @@ function App() {
   }
 
   return (
-    <>
+    <ThemeProvider>
       {!isLoaded ? <LoadingScreen onComplete={() => setIsLoaded(true)} /> : null}
       <div className={`opacity-0 transition-opacity duration-[450ms] ease-in ${isLoaded ? "opacity-100" : ""}`}>
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
@@ -41,7 +42,7 @@ function App() {
         <Skills skills={profile.skills} />
         <Contact />
       </div>
-    </>
+    </ThemeProvider>
   );
 }
 
