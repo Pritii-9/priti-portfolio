@@ -24,13 +24,13 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
   }, [onComplete]);
 
   return (
-    <div className="loader-wrap">
-      <p className="loader-text">
+    <div className="fixed inset-0 z-[100] grid place-items-center bg-[#030712]">
+      <p className="m-0 text-[1.5rem] text-[#f8fafc] font-ibm-plex-mono">
         {text}
-        <span className="cursor">|</span>
+        <span className="animate-blink">|</span>
       </p>
-      <div className="loader-track">
-        <div className="loader-bar" />
+      <div className="mt-3 w-[220px] h-[2px] bg-[rgba(148,163,184,0.35)] rounded-full overflow-hidden">
+        <div className="w-[45%] h-full bg-gradient-to-r from-brand to-ok animate-loading" />
       </div>
     </div>
   );

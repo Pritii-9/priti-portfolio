@@ -22,7 +22,10 @@ const RevealOnScroll = ({ children }: PropsWithChildren) => {
   }, []);
 
   return (
-    <div ref={ref} className="reveal">
+    <div
+      ref={ref}
+      className="opacity-0 translate-y-5 transition-all duration-500 ease-in-out [&.visible]:opacity-100 [&.visible]:translate-y-0"
+    >
       {children}
     </div>
   );

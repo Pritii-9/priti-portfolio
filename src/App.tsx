@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       {!isLoaded ? <LoadingScreen onComplete={() => setIsLoaded(true)} /> : null}
-      <div className={`app-shell ${isLoaded ? "ready" : "loading"}`}>
+      <div className={`opacity-0 transition-opacity duration-[450ms] ease-in ${isLoaded ? "opacity-100" : ""}`}>
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Home name={profile.name} title={profile.title} />

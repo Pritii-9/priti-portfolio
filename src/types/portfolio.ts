@@ -18,6 +18,7 @@ export interface ExperienceItem {
 export interface ProjectItem {
   title: string;
   period: string;
+  description: string;
   stack: string[];
   highlights: string[];
 }
