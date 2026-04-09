@@ -135,7 +135,7 @@ const Home = ({ name, title }: HomeProps) => {
 
               {/* Tech Stack Pills */}
               <div className="flex flex-wrap gap-2">
-                {['React', 'Node.js', 'Python', 'AWS', 'Docker', 'MongoDB', 'TypeScript', 'AI/ML'].map((tech) => (
+                {['React', 'Node.js', 'Python', 'AWS', 'Docker', 'MongoDB', 'TypeScript'].map((tech) => (
                   <span 
                     key={tech}
                     className="px-3 py-1.5 rounded-[10px] text-xs font-semibold border border-surface-border/40 bg-white/5 text-text-muted transition-all duration-300 hover:-translate-y-0.5 hover:text-text-main hover:bg-white/10 cursor-default"

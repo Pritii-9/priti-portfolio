@@ -23,9 +23,10 @@ export const portfolioData: PortfolioProfile = {
       location: "Pune, MH",
       project: "ArchManage (Architectural Management Platform)",
       highlights: [
-        "Built a scalable FastAPI + React SaaS platform used by 15+ architectural firms.",
-        "Delivered a Smart Quotation module that reduced manual estimate preparation time by 40%.",
-        "Implemented JWT-based RBAC and optimized API performance in agile release cycles."
+      "Developed a full-stack architectural management platform using React, Node.js, and TypeScript, implementing secure JWT authentication and role-based access for multi-user workspaces.",
+"Engineered real-time collaboration features using Socket.IO, applying efficient data handling patterns to reduce latency and improve dashboard responsiveness.",
+"Designed and optimized RESTful APIs for structured CRUD operations, validating endpoint behavior to ensure reliability and reduce regression issues.",
+"Collaborated in an Agile environment to debug, test, and deliver features on schedule, actively participating in code reviews and maintaining clean, reusable code."
       ]
     }
   ],
