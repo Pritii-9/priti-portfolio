@@ -21,6 +21,7 @@ export interface ProjectItem {
   description: string;
   stack: string[];
   highlights: string[];
+  githubUrl?: string;
 }
 
 export interface SkillGroup {

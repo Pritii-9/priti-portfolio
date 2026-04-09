@@ -19,7 +19,7 @@ export const portfolioData: PortfolioProfile = {
     {
       role: "Software Developer Intern",
       company: "Exaltasoft Solutions",
-      period: "Mar 2025 - Present",
+      period: "Nov 2025 - Present",
       location: "Pune, MH",
       project: "ArchManage (Architectural Management Platform)",
       highlights: [
@@ -40,7 +40,8 @@ export const portfolioData: PortfolioProfile = {
         "Built a secure full-stack document platform with byte-range PDF streaming for large files.",
         "Integrated AWS S3 multipart uploads and lazy rendering, improving load performance by 25%.",
         "Added JWT auth with email verification and containerized deployment using Docker."
-      ]
+      ],
+      githubUrl: "https://github.com/Pritii-9/pdf-streaming"
     },
     {
       title: "AI Mock Interview Platform",
@@ -51,7 +52,8 @@ export const portfolioData: PortfolioProfile = {
         "Developed a responsive mock interview platform in Next.js for desktop and mobile.",
         "Integrated Vapi Voice AI + Supabase for real-time technical interview conversations.",
         "Implemented adaptive AI prompts and optimized frontend performance for smooth interactions."
-      ]
+      ],
+      githubUrl: "https://github.com/Pritii-9/ai-interview-prep"
     },
     {
       title: "EcoSense: Sustainability Tracker",
@@ -64,7 +66,8 @@ export const portfolioData: PortfolioProfile = {
   "Built responsive UI with Tailwind (dark/light support).",
   "Engineered team collaboration with roles and leaderboards.",
   "Deployed using Docker and Nginx for scalability."
-      ]
+      ],
+      githubUrl: "https://github.com/Pritii-9/ecosense"
     }
   ],
  skills: [
@@ -90,4 +93,3 @@ export const portfolioData: PortfolioProfile = {
   }
 ]
 };
-
