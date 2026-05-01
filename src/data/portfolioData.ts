@@ -34,12 +34,13 @@ export const portfolioData: PortfolioProfile = {
     {
       title: "Secure PDF Streaming Platform",
       period: "Feb 2026",
-      description: "A secure full-stack document platform with byte-range PDF streaming for large files.",
-      stack: ["Python", "Flask", "React", "MongoDB", "Docker", "AWS S3"],
+      description: "A secure full-stack document platform with byte-range PDF streaming and AI-powered RAG for PDFs.",
+      stack: ["Python", "Flask", "React", "MongoDB", "Docker", "AWS S3", "pypdf", "sentence-transformers", "LangGraph", "Groq API"],
       highlights: [
-        "Built a secure full-stack document platform with byte-range PDF streaming for large files.",
-        "Integrated AWS S3 multipart uploads and lazy rendering, improving load performance by 25%.",
-        "Added JWT auth with email verification and containerized deployment using Docker."
+        "Implemented RAG pipeline: pypdf text extraction → chunking (~500 words) → embedding (sentence-transformers/all-MiniLM-L6-v2) → MongoDB vector search with cosine similarity fallback.",
+        "Built LangGraph REACT agent with custom tools (workspace analytics, document search, semantic search), using Groq Llama 3.3 70B and MongoDBSaver for conversation memory checkpointing.",
+        "Enabled streaming AI responses via SSE (Server-Sent Events), achieving real-time token-by-token delivery with ~300ms latency.",
+        "Secured platform with JWT authentication, email OTP verification, role-based access control, and AWS S3 presigned URLs for byte-range PDF streaming."
       ],
       githubUrl: "https://github.com/Pritii-9/pdf-streaming"
     },
@@ -59,37 +60,49 @@ export const portfolioData: PortfolioProfile = {
       title: "EcoSense: Sustainability Tracker",
       period: "April 2026",
       description: "Full-stack sustainability tracker with real-time impact metrics and circular economy features.",
-      stack: ["React", "TypeScript", "Python", "Flask", "MongoDB", "Socket.IO", "Tailwind CSS", "Docker", "Nginx"],
+      stack: ["React", "TypeScript", "Python", "Flask", "MongoDB", "Socket.IO", "Tailwind CSS", "Docker", "Nginx", "scikit-learn", "OpenAI GPT-4o-mini"],
       highlights: [
-          "Implemented live data sync using Socket.IO.",
-  "Secured system with JWT authentication and onboarding flows.",
-  "Built responsive UI with Tailwind (dark/light support).",
-  "Engineered team collaboration with roles and leaderboards.",
-  "Deployed using Docker and Nginx for scalability."
+        "Developed scikit-learn LinearRegression model for time-series CO2 forecasting in EcoSense waste app, processing 90-day historical logs for 30-day predictions with 95% confidence (pandas preprocessing).",
+        "Built recommendation engine using pandas groupby and Counter scoring, delivering personalized waste logging suggestions based on user history - increased engagement potential.",
+        "Integrated OpenAI GPT-4o-mini chatbot with custom sustainability prompt, handling recycling queries and app guidance with low latency (~300ms).",
+        "Implemented data pipeline: MongoDB -> pandas DataFrame -> ML features (preprocessing, visualization-ready stats, type breakdowns).",
+        "Enhanced analytics dashboard with AI cards (Recommendations, Chat) in React/TS, full-stack integration with JWT auth and real-time Socket.IO."
       ],
       githubUrl: "https://github.com/Pritii-9/ecosense"
     }
   ],
- skills: [
-  {
-    category: "Languages",
-    items: ["Python", "JavaScript", "TypeScript"]
-  },
-  {
-    category: "Core Concepts",
-    items: ["DSA", "OOP", "System Design"]
-  },
-  {
-    category: "Frameworks & Libraries",
-    items: ["React", "Next.js", "Node.js", "Flask", "TailwindCSS"]
-  },
-  {
-    category: "Databases & APIs",
-    items: ["MongoDB", "SQL", "RESTful API Design"]
-  },
-  {
-    category: "Cloud & DevOps",
-    items: ["AWS (EC2, S3)", "Docker", "Nginx", "Git"]
-  }
-]
+  skills: [
+    {
+      category: "Languages",
+      items: ["Python", "JavaScript", "TypeScript"]
+    },
+    {
+      category: "Core Concepts",
+      items: ["DSA", "OOP", "System Design"]
+    },
+    {
+      category: "Frameworks & Libraries",
+      items: ["React", "Next.js", "Node.js", "Flask", "TailwindCSS"]
+    },
+    {
+      category: "Databases & APIs",
+      items: ["MongoDB", "SQL", "RESTful API Design"]
+    },
+    {
+      category: "Cloud & DevOps",
+      items: ["AWS (EC2, S3)", "Docker", "Nginx", "Git"]
+    },
+    {
+      category: "AI/LLM, Sec, RAG & LangChain",
+      items: [
+        "pypdf (PDF text extraction)",
+        "sentence-transformers (all-MiniLM-L6-v2)",
+        "MongoDB vector search",
+        "Groq API (Llama 3.3)",
+        "LangGraph (create_react_agent)",
+        "MongoDBSaver (memory checkpointing)",
+        "JWT + OTP email verification"
+      ]
+    }
+  ]
 };
